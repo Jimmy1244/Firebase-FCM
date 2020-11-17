@@ -48,6 +48,10 @@
         } else {
             console.log('不支援sw');
         }
+
+        message.setBackgroundMessageHandler(function(payload){
+            console.log(payload);    
+        });
         
         // message.requestPermission()
         //     .then(res => {
