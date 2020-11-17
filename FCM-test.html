@@ -26,10 +26,10 @@
         firebase.initializeApp(firebaseConfig);
 
         const message = firebase.messaging();
-        messaging.requestPermission()
+        message.requestPermission()
             .then(res => {
                 // 若允許通知 -> 向 firebase 拿 token
-                return messaging.getToken();
+                return message.getToken();
             }, err => {
                 // 若拒絕通知
                 console.log(err);  
