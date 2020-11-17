@@ -37,6 +37,9 @@
                 .then(() => {
                     // getToken();
                     console.log(message.getToken())
+                    message.setBackgroundMessageHandler(function(payload){
+                        console.log(payload);    
+                    });
                 })
                 .catch(() => {
                     console.log('unable to get permission to notify');
@@ -48,10 +51,6 @@
         } else {
             console.log('不支援sw');
         }
-
-        message.setBackgroundMessageHandler(function(payload){
-            console.log(payload);    
-        });
         
         // message.requestPermission()
         //     .then(res => {
