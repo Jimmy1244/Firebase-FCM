@@ -36,7 +36,7 @@
                 message.requestPermission()
                 .then(() => {
                     // getToken();
-                    console.log('允許通知')
+                    console.log(message.getToken())
                 })
                 .catch(() => {
                     console.log('unable to get permission to notify');
@@ -49,19 +49,19 @@
             console.log('不支援sw');
         }
         
-        message.requestPermission()
-            .then(res => {
-                // 若允許通知 -> 向 firebase 拿 token
-                return message.getToken();
-            }, err => {
-                // 若拒絕通知
-                console.log(err);  
-            })
-            .then(token => {
-                // 成功取得 token
-                //postToken(token); // 打給後端 api
-                console.log(token);
-            });
+        // message.requestPermission()
+        //     .then(res => {
+        //         // 若允許通知 -> 向 firebase 拿 token
+        //         return message.getToken();
+        //     }, err => {
+        //         // 若拒絕通知
+        //         console.log(err);  
+        //     })
+        //     .then(token => {
+        //         // 成功取得 token
+        //         //postToken(token); // 打給後端 api
+        //         console.log(token);
+        //     });
         </script>
 	</body>
 </html>
