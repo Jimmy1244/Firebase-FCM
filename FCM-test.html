@@ -30,7 +30,7 @@
 
         if('serviceWorker' in navigator) {
             console.log('支援sw');
-            navigator.serviceWorker.register("這邊放你自訂的 service-worker.js")
+            navigator.serviceWorker.register("service-worker.js")
             .then(registration => {
                 message.useServiceWorker(registration);
                 message.requestPermission()
