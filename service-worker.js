@@ -1,3 +1,6 @@
+importScripts("https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js");
+importScripts("https://www.gstatic.com/firebasejs/8.0.2/firebase-messaging.js");
+
 var firebaseConfig = {
     apiKey: "AIzaSyCX30cBMZd48VmGNfGLuk8_-S5l-IQKPF0",
     authDomain: "playground-f317d.firebaseapp.com",
