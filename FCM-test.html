@@ -23,6 +23,21 @@
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
+
+        const message = firebase.messaging();
+        messaging.requestPermission()
+            .then(res => {
+                // 若允許通知 -> 向 firebase 拿 token
+                return messaging.getToken();
+            }, err => {
+                // 若拒絕通知
+                console.log(err);  
+            })
+            .then(token => {
+                // 成功取得 token
+                //postToken(token); // 打給後端 api
+                console.log(token);
+            });
         </script>
 	</body>
 </html>
